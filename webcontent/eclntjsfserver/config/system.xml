@@ -1,0 +1,17 @@
+<!--
+    System configuration.
+ -->
+
+<system>
+    <sessionmanagement
+        type="COOKIE"
+    />
+
+    <riscclientfontaccess face="Inter"/>
+
+    <riscstarter
+            pageicon="images/cr-icon.png"
+            title="PX Central Repository"
+            confirmexit="true"
+    />
+</system>

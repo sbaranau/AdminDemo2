@@ -1,0 +1,480 @@
+<stylesheet>
+    <var n="@backgroundModifierFocusField@" v="none"/>
+    <var n="@baseColor@" v="#0d2757"/>
+    <var n="@buttonBackground@" v="@greyBackground@"/>
+    <var n="@buttonBoxShadow@" v="none"/>
+    <var n="@buttonForeground@" v="@baseColor@"/>
+    <var n="@buttonInsets@" v="1 10 1 10"/>
+    <var n="@colorBlue@" v="#0017ff"/>
+    <var n="@colorWhite@" v="#FFFFFF"/>
+    <var n="@commentBorderColor@" v="#dee2e7"/>
+    <var n="@contentHeaderHeight@" v="60"/>
+    <var n="@fieldBackground@" v="#FFFFFF"/>
+    <var n="@fieldForeground@" v="@baseColor@"/>
+    <var n="@fieldInsets@" v="6 2 6 2"/>
+    <var n="@font10@" v="10"/>
+    <var n="@font12@" v="12"/>
+    <var n="@font14@" v="14"/>
+    <var n="@font17@" v="17"/>
+    <var n="@font18@" v="18"/>
+    <var n="@fontDefaultSize@" v="13"/>
+    <var n="@fontFamily@" v="Inter"/>
+    <var n="@fontFamilyLight@" v="Inter Light"/>
+    <var n="@greyBackground@" v="#f6f6f6"/>
+    <var n="@gridHeaderBackground@" v="@baseColor@"/>
+    <var n="@gridHeaderForeground@" v="@colorWhite@"/>
+    <var n="@headerHeight@" v="83px"/>
+    <var n="@labelColor@" v="#0d2757"/>
+    <var n="@labelSize@" v="14"/>
+    <var n="@leftMenuWidth@" v="265px"/>
+    <var n="@popupTitleBackground@" v="@baseColor@"/>
+    <var n="@selectedTab@" v="#4d6389"/>
+    <var n="@tabHeight@" v="38"/>
+    <var n="@tabWidth@" v="136"/>
+    <var n="@textForeground@" v="@baseColor@"/>
+    <class n="administration-tabbedpane" extends="risctabbedpane">
+        <var   n="@type2Background@" v="#0d2757"/>
+        <var   n="@type2SelectedBackground@" v="#4d6389"/>
+    </class>
+    <class n="button" extends="riscbutton">
+    </class>
+    <class n="button_nofill" extends="riscbutton_nofill">
+        <class n=" > .riscelement">
+        </class>
+    </class>
+    <class n="content-tab" extends="risctabbedline">
+        <risc  n="_backgroundModifierActive" v="none"/>
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="inset" v="0 14 0 0"/>
+        <style n="background" v="@colorWhite@"/>
+        <style n="border" v="none"/>
+        <class n="_button" extends="riscbutton">
+            <var   n="@_buttonFont@" v="14"/>
+            <var   n="@buttonBackground@" v="none"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonFontWeight@" v="normal"/>
+            <var   n="@buttonForeground@" v="none"/>
+            <var   n="@buttonMargin@" v="0 0 0 0"/>
+            <var   n="@fontDefaultSize@" v="@font14@"/>
+            <risc  n="_backgroundModifierFocus" v="none"/>
+            <risc  n="_backgroundModifierHover" v="none"/>
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="@tabbedLineButtonInsets@"/>
+            <style n="border" v="none"/>
+            <style n="border-radius" v="none"/>
+            <style n="border-right" v="none"/>
+            <style n="padding" v="0"/>
+        </class>
+        <class n="_button_selected" extends="riscbutton">
+            <var   n="@_buttonFont@" v="14"/>
+            <var   n="@buttonBackground@" v="none"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonFontWeight@" v="normal"/>
+            <var   n="@buttonForeground@" v="none"/>
+            <var   n="@buttonMargin@" v="0 9 0 9"/>
+            <var   n="@fontDefaultSize@" v="@font14@"/>
+            <risc  n="_backgroundModifierFocus" v="none"/>
+            <risc  n="_backgroundModifierHover" v="none"/>
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="@tabbedLineButtonInsets@"/>
+            <style n="border" v="none"/>
+            <style n="border-bottom" v="5px solid #df7d36"/>
+            <style n="border-radius" v="none"/>
+            <style n="border-right" v="none"/>
+            <style n="padding" v="0"/>
+        </class>
+        <class n="_content">
+            <risc  n="background" v="@colorWhite@"/>
+            <style n="background" v="@colorWhite@"/>
+            <style n="border" v="none"/>
+            <style n="color" v="@baseColor@"/>
+            <style n="font-family" v="@fontFamily@"/>
+            <style n="font-size" v="@font14@px"/>
+        </class>
+    </class>
+    <class n="folder-pane">
+        <var   n="@_buttonFontFamily@" v="Inter"/>
+        <var   n="@_fontFamily@" v="Inter"/>
+        <var   n="@buttonForeground@" v="#0d2757"/>
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="_imageClosed" v="images/arrow_right_blue.png"/>
+        <risc  n="_imageOpened" v="images/arrow_down_blue.png"/>
+        <risc  n="border" v="1 1 1 1"/>
+        <risc  n="margin" v="@containerMargin@"/>
+        <style n="border" v="none"/>
+        <style n="box-shadow" v="none"/>
+        <class n="_contentpane">
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="2 10 10 10"/>
+        </class>
+        <class n="_titlebutton" extends="riscbutton">
+            <var   n="@_buttonFont@" v="18"/>
+            <var   n="@buttonBackground@" v="transparent"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonMargin@" v="0 0 0 0"/>
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="0 0 0 3"/>
+            <style n="border" v="none"/>
+            <style n="font-family" v="@_fontFamily@"/>
+            <class n=".disabled">
+                <style n="opacity" v="1"/>
+            </class>
+        </class>
+        <class n="_toppane">
+            <risc  n="inset" v="@buttonInsets@"/>
+            <style n="background" v="transparent"/>
+        </class>
+        <class n="_toppane_closed">
+            <risc  n="inset" v="@buttonInsets@"/>
+        </class>
+    </class>
+    <class n="form-folder-pane" extends="folder-pane">
+        <var   n="@buttonInsets@" v="2 10 2 0"/>
+        <class n="_contentpane">
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="2 10 10 10"/>
+        </class>
+    </class>
+    <class n="header-container">
+        <style n="background" v="@colorWhite@"/>
+    </class>
+    <class n="header-dropdown_nofill">
+        <risc  n="_backgroundModifierActive" v="none"/>
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="background" v="transparent"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; 18px"/>
+        <risc  n="inset" v="4 3 4 3"/>
+        <style n="background" v="transparent"/>
+        <style n="cursor" v="pointer"/>
+        <class n=" > .riscelement" extends="riscinternal_withtextselection">
+            <style n="font-size" v="18px"/>
+        </class>
+    </class>
+    <class n="header-image" extends="risclink">
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <class n="> .riscelementimage">
+            <style n="height" v="100%"/>
+            <style n="width" v="100%"/>
+        </class>
+    </class>
+    <class n="header-link" extends="risclink">
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; @font18@"/>
+        <style n="border" v="none"/>
+        <style n="color" v="@baseColor@"/>
+        <style n="cursor" v="default"/>
+        <style n="font-size" v="@font18@px"/>
+        <class n=":hover > .riscelement">
+            <style n="text-decoration" v="none"/>
+        </class>
+        <class n="> .riscelement">
+            <style n="color" v="@baseColor@"/>
+            <style n="cursor" v="pointer"/>
+            <style n="font-size" v="@font18@px"/>
+        </class>
+    </class>
+    <class n="header-title" extends="label">
+        <var   n="@labelSize@" v="37"/>
+    </class>
+    <class n="header-username" extends="label-font-18">
+    </class>
+    <class n="icon-button" extends="riscicon">
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+    </class>
+    <class n="icon-buttonmenu">
+        <risc  n="_backgroundModifierActive" v="none"/>
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="background" v="transparent"/>
+        <risc  n="inset" v="4 3 4 3"/>
+        <style n="background" v="transparent"/>
+        <style n="cursor" v="pointer"/>
+        <class n=" > .riscelement" extends="riscinternal_withtextselection">
+            <style n="cursor" v="pointer"/>
+        </class>
+    </class>
+    <class n="label">
+        <risc  n="_backgroundModifierFocus" v="@backgroundModifierFocusDark@"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; @labelSize@"/>
+        <risc  n="inset" v="2 2 2 0"/>
+        <style n="color" v="@labelColor@"/>
+        <style n="font-family" v="@fontFamily@"/>
+        <style n="font-size" v="@labelSize@px"/>
+        <style n="white-space" v="normal"/>
+        <class n=" > .riscelement" extends="riscinternal_withtextselection">
+            <style n="color" v="@labelColor@"/>
+            <style n="font-family" v="@fontFamily@"/>
+            <style n="font-size" v="@labelSize@px"/>
+        </class>
+    </class>
+    <class n="label-font-10" extends="label">
+        <var   n="@labelSize@" v="10"/>
+    </class>
+    <class n="label-font-12" extends="label">
+        <var   n="@labelSize@" v="12"/>
+    </class>
+    <class n="label-font-14" extends="label">
+        <var   n="@labelSize@" v="14"/>
+    </class>
+    <class n="label-font-16" extends="label">
+        <var   n="@labelSize@" v="16"/>
+    </class>
+    <class n="label-font-18" extends="label">
+        <var   n="@labelSize@" v="18"/>
+    </class>
+    <class n="label-font-24" extends="label">
+        <var   n="@labelSize@" v="24"/>
+    </class>
+    <class n="label-version" extends="label-font-12">
+        <var   n="@labelColor@" v="#FFFFFF"/>
+    </class>
+    <class n="left-article-item-label" extends="label-font-14">
+        <var   n="@fontFamily@" v="Inter Light"/>
+        <var   n="@labelColor@" v="#FFFFFF"/>
+    </class>
+    <class n="left-article-item-label-name" extends="label-font-14">
+        <var   n="@fontFamily@" v="Inter Light"/>
+        <var   n="@labelColor@" v="#FFFFFF"/>
+    </class>
+    <class n="left-menu" extends="riscsingletreenode">
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="_indentperlevel" v="14"/>
+        <risc  n="font" v="&#34;@fontFamilyLight@&#34; 22"/>
+        <risc  n="inset" v="0 0 0 14"/>
+        <style n="cursor" v="pointer"/>
+        <style n="padding-left" v="14"/>
+        <class n="_text" extends="riscinternal_notextselection_important">
+            <style n="color" v="@colorWhite@"/>
+            <style n="font-family" v="@fontFamilyLight@"/>
+            <style n="font-size" v="@font17@px"/>
+            <style n="padding-left" v="7px"/>
+            <style n="white-space" v="nowrap"/>
+        </class>
+        <class n="_toggleimage">
+        </class>
+    </class>
+    <class n="left-menu-description" extends="risctextpane">
+        <risc  n="font" v="&#34;@fontFamilyLight@&#34; @font14@"/>
+        <style n="font-family" v="@fontFamilyLight@"/>
+        <style n="font-size" v="@font14@px"/>
+        <class n="_text" extends="riscinternal_withtextselection_important">
+            <style n="color" v="@colorWhite@"/>
+            <style n="font-family" v="@fontFamilyLight@"/>
+            <style n="font-size" v="@font14@px"/>
+        </class>
+    </class>
+    <class n="left-menu-folder-pane" extends="folder-pane">
+        <var   n="@_fontFamily@" v="Inter Light"/>
+        <var   n="@buttonForeground@" v="#FFFFFF"/>
+        <risc  n="_imageClosed" v="images/arrow_right_white.png"/>
+        <risc  n="_imageOpened" v="images/arrow_down_white.png"/>
+        <class n="_titlebutton" extends="riscbutton">
+            <var   n="@_buttonFont@" v="18"/>
+            <var   n="@_buttonFontFamily@" v="Inter Light"/>
+            <var   n="@buttonBackground@" v="transparent"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonMargin@" v="0 0 0 0"/>
+            <risc  n="border" v="0 0 0 0"/>
+            <risc  n="inset" v="0 0 0 3"/>
+            <style n="border" v="none"/>
+            <style n="font-family" v="@_fontFamily@"/>
+            <class n=".disabled">
+                <style n="opacity" v="1"/>
+            </class>
+        </class>
+    </class>
+    <class n="left-menu-label" extends="label">
+        <risc  n="font" v="&#34;@fontFamilyLight@&#34; 22"/>
+        <style n="color" v="@colorWhite@"/>
+        <style n="font-family" v="@fontFamilyLight@"/>
+        <style n="font-size" v="@font18@px"/>
+        <class n=" > .riscelement" extends="riscinternal_withtextselection">
+            <style n="color" v="@colorWhite@"/>
+            <style n="font-family" v="@fontFamilyLight@"/>
+            <style n="font-size" v="@font18@px"/>
+        </class>
+    </class>
+    <class n="left-menu-label-font-12" extends="left-menu-label">
+        <risc  n="font" v="&#34;@fontFamilyLight@&#34; 16"/>
+        <style n="font-size" v="@font12@px"/>
+        <class n=" > .riscelement" extends="riscinternal_withtextselection">
+            <style n="color" v="@colorWhite@"/>
+            <style n="font-family" v="@fontFamilyLight@"/>
+            <style n="font-size" v="@font12@px"/>
+        </class>
+    </class>
+    <class n="link" extends="risclink">
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierHover" v="none"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; @font14@ bold"/>
+        <style n="color" v="@colorBlue@"/>
+        <style n="font-size" v="@font14@px"/>
+        <style n="font-weight" v="bold"/>
+        <class n=":hover > .riscelement">
+            <style n="text-decoration" v="none"/>
+        </class>
+        <class n="> .riscelement">
+            <style n="color" v="@colorBlue@"/>
+            <style n="font-size" v="@font14@px"/>
+            <style n="font-weight" v="bold"/>
+        </class>
+    </class>
+    <class n="menuitem" extends="riscmenuitem">
+        <risc  n="inset" v="@fieldInsets@"/>
+        <style n="color" v="@baseColor@"/>
+        <class n="> *">
+            <style n="color" v="@baseColor@"/>
+        </class>
+    </class>
+    <class n="new-comment-container">
+        <style n="background" v="@colorWhite@"/>
+    </class>
+    <class n="riscanimation_action_execute">
+        <style n="background" v="none"/>
+        <style n="height" v="0"/>
+        <style n="left" v="0px"/>
+        <style n="top" v="0px"/>
+        <style n="transition" v="background @animationDurationAction@, height 0.01s @animationDurationAction@"/>
+        <style n="width" v="100%"/>
+    </class>
+    <class n="riscanimation_action_prepare">
+        <style n="background" v="none"/>
+        <style n="height" v="100%"/>
+        <style n="left" v="0px"/>
+        <style n="top" v="0px"/>
+        <style n="width" v="100%"/>
+    </class>
+    <class n="riscbutton">
+        <var   n="@_buttonFont@" v="14"/>
+        <var   n="@_buttonFontFamily@" v="Inter"/>
+        <risc  n="_animationAction" v="@backgroundAnimationAction@"/>
+        <risc  n="_backgroundModifierFocus" v="none"/>
+        <risc  n="_backgroundModifierWithDrillDown" v="false"/>
+        <risc  n="background" v="@buttonBackground@"/>
+        <risc  n="border" v="1 1 1 1"/>
+        <risc  n="font" v="&#34;@_buttonFontFamily@&#34; @_buttonFont@"/>
+        <risc  n="inset" v="@buttonInsets@"/>
+        <risc  n="margin" v="@buttonMargin@"/>
+        <style n="background" v="@buttonBackground@"/>
+        <style n="border" v="1px solid @commentBorderColor@"/>
+        <style n="border-radius" v="0"/>
+        <style n="box-shadow" v="@buttonBoxShadow@"/>
+        <style n="cursor" v="pointer"/>
+        <style n="font-family" v="@_buttonFontFamily@"/>
+        <style n="font-size" v="@_buttonFont@px"/>
+        <style n="white-space" v="nowrap"/>
+        <class n=" > .riscelement">
+            <style n="color" v="@buttonForeground@"/>
+            <style n="cursor" v="pointer"/>
+            <style n="font-family" v="@_buttonFontFamily@"/>
+            <style n="font-size" v="@_buttonFont@px"/>
+            <style n="text-overflow" v="clip"/>
+            <style n="white-space" v="nowrap"/>
+        </class>
+        <class n=".disabled">
+            <style n="cursor" v="default"/>
+            <style n="opacity" v="0.4"/>
+        </class>
+        <class n=".disabled > *">
+            <style n="cursor" v="default"/>
+        </class>
+    </class>
+    <class n="riscelement">
+        <style n="color" v="@baseColor@"/>
+        <style n="cursor" v="default"/>
+        <style n="font-family" v="@fontFamily@"/>
+        <style n="font-size" v="@fontDefaultSize@px"/>
+    </class>
+    <class n="riscfield">
+        <risc  n="background" v="transparent"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; @fontDefaultSize@"/>
+        <risc  n="inset" v="@fieldInsets@"/>
+        <style n="background" v="transparent"/>
+        <style n="border" v="none"/>
+        <style n="color" v="@fieldForeground@"/>
+        <style n="font-family" v="@fontFamily@"/>
+        <style n="font-size" v="@fontDefaultSize@px"/>
+        <style n="resize" v="none"/>
+    </class>
+    <class n="riscflexgridrow_selected">
+        <style n="background" v="none"/>
+        <style n="font-family" v="@fontFamily@"/>
+        <style n="font-size" v="@fontDefaultSize@px"/>
+    </class>
+    <class n="rischeaderlabel">
+        <risc  n="_backgroundModifierFocus" v="@backgroundModifierFocusDark@"/>
+        <risc  n="_sortimagedown" v="images/icons/grid_sortdown.svg"/>
+        <risc  n="_sortimageup" v="images/icons//grid_sortup.svg"/>
+        <risc  n="background" v="@gridHeaderBackground@"/>
+        <risc  n="font" v="&#34;@fontFamily@&#34; @fontDefaultSize@ bold"/>
+        <risc  n="inset" v="0 0 0 0"/>
+        <style n="background" v="@gridHeaderBackground@"/>
+        <style n="font-family" v="@fontFamilyLight@"/>
+        <style n="font-size" v="@fontDefaultSize@px"/>
+        <style n="font-weight" v="bold"/>
+        <class n="_text" extends="risctextpane">
+            <risc  n="font" v="&#34;@fontFamily@&#34; @fontDefaultSize@ bold"/>
+            <risc  n="inset" v="0 3 0 3"/>
+            <style n="color" v="@gridHeaderForeground@"/>
+            <style n="font-weight" v="bold"/>
+            <style n="white-space" v="nowrap"/>
+            <class n="_text">
+                <style n="color" v="@gridHeaderForeground@"/>
+                <style n="font-weight" v="bold"/>
+                <style n="white-space" v="nowrap"/>
+            </class>
+        </class>
+        <class n="_text_multiline" extends="risctextpane">
+            <risc  n="font" v="&#34;@fontFamily@&#34; @fontDefaultSize@ bold"/>
+            <risc  n="inset" v="0 3 0 3"/>
+            <style n="color" v="@gridHeaderForeground@"/>
+            <style n="font-weight" v="bold"/>
+            <class n="_text">
+                <style n="color" v="@gridHeaderForeground@"/>
+                <style n="font-weight" v="bold"/>
+            </class>
+        </class>
+    </class>
+    <class n="risctabbedlinevertical">
+        <risc  n="inset" v="0 0 0 0"/>
+        <style n="background" v="@baseColor@"/>
+        <style n="border" v="0px"/>
+        <class n="_button" extends="riscbutton">
+            <var   n="@_buttonFont@" v="18"/>
+            <var   n="@_buttonFontFamily@" v="Inter Light"/>
+            <var   n="@buttonBackground@" v="@baseColor@"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonForeground@" v="@colorWhite@"/>
+            <var   n="@buttonMargin@" v="0 0 0 0"/>
+            <var   n="@fontDefaultSize@" v="@font18@"/>
+            <var   n="@tabbedLineButtonInsets@" v="3 13 3 15"/>
+            <risc  n="border" v="0 0 1 0"/>
+            <risc  n="font" v="&#34;@_buttonFontFamily@&#34; 24"/>
+            <risc  n="inset" v="@tabbedLineButtonInsets@"/>
+            <style n="border" v="none"/>
+            <style n="border-bottom" v="none"/>
+        </class>
+        <class n="_button_selected" extends="riscbutton">
+            <var   n="@_buttonFont@" v="18"/>
+            <var   n="@_buttonFontFamily@" v="Inter Light"/>
+            <var   n="@buttonBackground@" v="@selectedTab@"/>
+            <var   n="@buttonBoxShadow@" v="none"/>
+            <var   n="@buttonForeground@" v="@colorWhite@"/>
+            <var   n="@buttonMargin@" v="0 0 0 0"/>
+            <var   n="@fontDefaultSize@" v="@font18@"/>
+            <var   n="@tabbedLineButtonInsets@" v="3 13 3 15"/>
+            <risc  n="border" v="0 0 1 0"/>
+            <risc  n="font" v="&#34;@_buttonFontFamily@&#34; 24"/>
+            <risc  n="inset" v="@tabbedLineButtonInsets@"/>
+            <style n="border" v="none"/>
+            <style n="border-bottom" v="none"/>
+        </class>
+    </class>
+</stylesheet>

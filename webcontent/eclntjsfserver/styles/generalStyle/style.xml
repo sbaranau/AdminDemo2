@@ -1,0 +1,249 @@
+<style extends="defaultrisc">
+    <stylevalue name="@backgroundModifierFocusField@" value="none"/>
+    <stylevalue name="@baseColor@" value="#0d2757"/>
+    <stylevalue name="@buttonBackground@" value="@greyBackground@"/>
+    <stylevalue name="@buttonBoxShadow@" value="none"/>
+    <stylevalue name="@buttonForeground@" value="@baseColor@"/>
+    <stylevalue name="@buttonInsets@" value="1 10 1 10"/>
+    <stylevalue name="@colorBlue@" value="#0017ff"/>
+    <stylevalue name="@colorWhite@" value="#FFFFFF"/>
+    <stylevalue name="@commentBorderColor@" value="#dee2e7"/>
+    <stylevalue name="@contentHeaderHeight@" value="60"/>
+    <stylevalue name="@fieldBackground@" value="#FFFFFF"/>
+    <stylevalue name="@fieldForeground@" value="@baseColor@"/>
+    <stylevalue name="@fieldInsets@" value="6 2 6 2"/>
+    <stylevalue name="@font10@" value="10"/>
+    <stylevalue name="@font12@" value="12"/>
+    <stylevalue name="@font14@" value="14"/>
+    <stylevalue name="@font17@" value="17"/>
+    <stylevalue name="@font18@" value="18"/>
+    <stylevalue name="@fontDefaultSize@" value="13"/>
+    <stylevalue name="@fontFamily@" value="Inter"/>
+    <stylevalue name="@fontFamilyLight@" value="Inter Light"/>
+    <stylevalue name="@greyBackground@" value="#f6f6f6"/>
+    <stylevalue name="@gridHeaderBackground@" value="@baseColor@"/>
+    <stylevalue name="@gridHeaderForeground@" value="@colorWhite@"/>
+    <stylevalue name="@headerHeight@" value="83px"/>
+    <stylevalue name="@labelColor@" value="#0d2757"/>
+    <stylevalue name="@labelSize@" value="14"/>
+    <stylevalue name="@leftMenuWidth@" value="265px"/>
+    <stylevalue name="@popupTitleBackground@" value="@baseColor@"/>
+    <stylevalue name="@selectedTab@" value="#4d6389"/>
+    <stylevalue name="@tabHeight@" value="38"/>
+    <stylevalue name="@tabWidth@" value="136"/>
+    <stylevalue name="@textForeground@" value="@baseColor@"/>
+    <tag name="t:button" variant="default">
+        <set attribute="background" value="@greyBackground@"/>
+        <set attribute="border" value="@commentBorderColor@"/>
+        <set attribute="height" value="26"/>
+        <set attribute="rounding" value="0"/>
+        <set attribute="styleseq" value="riscbutton"/>
+    </tag>
+    <tag name="t:fileuploadbutton" variant="default">
+        <set attribute="background" value="@greyBackground@"/>
+        <set attribute="border" value="@commentBorderColor@"/>
+        <set attribute="height" value="26"/>
+        <set attribute="rounding" value="0"/>
+        <set attribute="styleseq" value="button"/>
+    </tag>
+    <tag name="t:label" variant="default">
+        <set attribute="styleseq" value="label"/>
+    </tag>
+    <tag name="t:menuitem" variant="default">
+        <set attribute="styleseq" value="menuitem"/>
+    </tag>
+    <tag name="t:pane" variant="header">
+        <set attribute="height" value="@headerHeight@"/>
+    </tag>
+    <tag name="t:pane" variant="var-admin-content-body-with-tabs">
+        <set attribute="background" value="@greyBackground@"/>
+        <set attribute="height" value="100%"/>
+        <set attribute="padding" value="top:10;left:15;right:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-admin-content-icon-container">
+        <set attribute="padding" value="right:15;bottom:5"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-comment-container">
+        <set attribute="background" value="@greyBackground@"/>
+        <set attribute="padding" value="15"/>
+    </tag>
+    <tag name="t:pane" variant="var-content-body">
+        <set attribute="height" value="100%"/>
+        <set attribute="padding" value="left:15;right:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-content-header">
+        <set attribute="height" value="@contentHeaderHeight@"/>
+        <set attribute="padding" value="left:15;right:15;top:5"/>
+        <set attribute="rowalignmenty" value="middle"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:tabbedline" variant="var-content-tab">
+        <set attribute="menuiconvisible" value="false"/>
+        <set attribute="padding" value="left:22"/>
+        <set attribute="styleseq" value="content-tab"/>
+        <set attribute="tabheight" value="@tabHeight@"/>
+    </tag>
+    <tag name="t:pane" variant="var-dynamic-table-body-padding">
+        <set attribute="height" value="100%"/>
+        <set attribute="padding" value="left:30;right:30"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-dynamic-table-header-padding">
+        <set attribute="padding" value="left:15;right:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:foldablepane" variant="var-folder-pane">
+        <set attribute="enabled" value="false"/>
+        <set attribute="iconontheleft" value="true"/>
+        <set attribute="padding" value="left:35;right:35;top:10;bottom:10"/>
+        <set attribute="rowdistance" value="5"/>
+        <set attribute="styleseq" value="folder-pane"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-form-container">
+        <set attribute="background" value="@greyBackground@"/>
+        <set attribute="padding" value="15"/>
+    </tag>
+    <tag name="t:pane" variant="var-form-content">
+        <set attribute="height" value="100%"/>
+        <set attribute="padding" value="left:15;right:15;top:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:foldablepane" variant="var-form-folder-pane">
+        <set attribute="iconontheleft" value="true"/>
+        <set attribute="padding" value="top:10;bottom:10"/>
+        <set attribute="rowdistance" value="5"/>
+        <set attribute="styleseq" value="form-folder-pane"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-form-header-container">
+        <set attribute="height" value="@contentHeaderHeight@"/>
+        <set attribute="padding" value="left:20;right:25;top:5"/>
+        <set attribute="rowalignmenty" value="middle"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-grey-background">
+        <set attribute="background" value="@greyBackground@"/>
+    </tag>
+    <tag name="t:rowline" variant="var-header-bottom-line">
+        <set attribute="background" value="@baseColor@"/>
+    </tag>
+    <tag name="t:icon" variant="var-header-image">
+        <set attribute="imageheight" value="58"/>
+        <set attribute="imagewidth" value="124"/>
+    </tag>
+    <tag name="t:link" variant="var-header-link">
+        <set attribute="border" value="right:1;color:@colorBase@"/>
+        <set attribute="padding" value="right:18;left:18;top:10;bottom:10"/>
+        <set attribute="styleseq" value="header-link"/>
+    </tag>
+    <tag name="t:pane" variant="var-header-right-buttons">
+        <set attribute="padding" value="left:18;right:18"/>
+    </tag>
+    <tag name="t:pane" variant="var-header-title">
+        <set attribute="border" value="bottom:1;color:@colorWhite@"/>
+        <set attribute="padding" value="left:118"/>
+    </tag>
+    <tag name="t:buttonmenu" variant="var-icon-button">
+        <set attribute="border" value="noborder"/>
+        <set attribute="height" value="24"/>
+        <set attribute="styleseq" value="icon-buttonmenu"/>
+        <set attribute="width" value="30"/>
+    </tag>
+    <tag name="t:icon" variant="var-icon-button">
+        <set attribute="border" value="noborder"/>
+        <set attribute="height" value="24"/>
+        <set attribute="styleseq" value="icon-button"/>
+        <set attribute="width" value="30"/>
+    </tag>
+    <tag name="t:pane" variant="var-left-article-item-container">
+        <set attribute="border" value="bottom:1;color:@colorWhite@"/>
+        <set attribute="padding" value="top:3;right:10;left:10"/>
+    </tag>
+    <tag name="t:pane" variant="var-left-menu">
+        <set attribute="background" value="@baseColor@"/>
+        <set attribute="height" value="100%"/>
+        <set attribute="width" value="@leftMenuWidth@"/>
+    </tag>
+    <tag name="t:foldablepane" variant="var-left-menu-folder-pane">
+        <set attribute="background" value="@baseColor@"/>
+        <set attribute="enabled" value="false"/>
+        <set attribute="iconontheleft" value="true"/>
+        <set attribute="styleseq" value="left-menu-folder-pane"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:fixgrid" variant="var-left-menu-grid">
+        <set attribute="background" value="@baseColor@"/>
+        <set attribute="selectioncolor1" value="#4d6389"/>
+    </tag>
+    <tag name="t:pane" variant="var-left-menu-grid-container">
+        <set attribute="height" value="100%"/>
+        <set attribute="padding" value="top:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:rowline" variant="var-left-menu-line">
+        <set attribute="background" value="@colorWhite@"/>
+    </tag>
+    <tag name="t:pane" variant="var-left-menu-line-container">
+        <set attribute="padding" value="15"/>
+    </tag>
+    <tag name="t:tabbedlinevertical" variant="var-left-menu-tabbedline">
+    </tag>
+    <tag name="t:pane" variant="var-left-menu-version-container">
+        <set attribute="height" value="20"/>
+        <set attribute="padding" value="bottom:5"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-left-split-menu">
+        <set attribute="background" value="@baseColor@"/>
+    </tag>
+    <tag name="t:splitpane" variant="var-left-split-menu-container">
+        <set attribute="dividerlocation" value="@leftMenuWidth@"/>
+        <set attribute="dividersize" value="0"/>
+    </tag>
+    <tag name="t:pane" variant="var-logo-header">
+        <set attribute="background" value="@baseColor@"/>
+        <set attribute="height" value="25%"/>
+        <set attribute="padding" value="10"/>
+        <set attribute="rowdistance" value="5"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:pane" variant="var-new-comment">
+    </tag>
+    <tag name="t:pane" variant="var-new-comment-container">
+        <set attribute="background" value="@colorWhite@"/>
+        <set attribute="border" value="@commentBorderColor@"/>
+        <set attribute="padding" value="right:15px;left:15px;bottom:15px:top:10px"/>
+    </tag>
+    <tag name="t:textarea" variant="var-new-comment-input">
+        <set attribute="border" value="@commentBorderColor@"/>
+        <set attribute="height" value="110"/>
+        <set attribute="padding" value="10"/>
+    </tag>
+    <tag name="t:splitpane" variant="var-project-node-container">
+        <set attribute="dividerlocation" value="350"/>
+        <set attribute="dividersize" value="2"/>
+        <set attribute="padding" value="left:15;right:15;bottom:15"/>
+    </tag>
+    <tag name="t:pane" variant="var-search-filter-container">
+        <set attribute="padding" value="left:15;right:15;top:15"/>
+    </tag>
+    <tag name="t:pane" variant="var-stored-comment-container">
+        <set attribute="background" value="@colorWhite@"/>
+        <set attribute="border" value="@commentBorderColor@"/>
+        <set attribute="padding" value="left:15;right:15"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    <tag name="t:row" variant="var-stored-comment-header">
+        <set attribute="border" value="bottom:1;color:@commentBorderColor@"/>
+    </tag>
+    <tag name="t:pane" variant="var-sync-table-form-header">
+        <set attribute="height" value="@contentHeaderHeight@"/>
+        <set attribute="padding" value="left:5;right:5;top:-20"/>
+        <set attribute="rowalignmenty" value="middle"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+</style>
